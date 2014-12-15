@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Form:</strong>
+  <%= @form_datum.form %>
+</p>
+
+<p>
+  <strong>Match number:</strong>
+  <%= @form_datum.match_number %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @form_datum.team %>
+</p>
+
+<p>
+  <strong>Scouter:</strong>
+  <%= @form_datum.scouter %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @form_datum.comments %>
+</p>
+
+<%= link_to 'Edit', edit_form_datum_path(@form_datum) %> |
+<%= link_to 'Back', form_data_path %>

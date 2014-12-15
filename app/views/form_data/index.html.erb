@@ -1,0 +1,33 @@
+<h1>Listing form_data</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Form</th>
+      <th>Match number</th>
+      <th>Team</th>
+      <th>Scouter</th>
+      <th>Comments</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @form_data.each do |form_datum| %>
+      <tr>
+        <td><%= form_datum.form %></td>
+        <td><%= form_datum.match_number %></td>
+        <td><%= form_datum.team %></td>
+        <td><%= form_datum.scouter %></td>
+        <td><%= form_datum.comments %></td>
+        <td><%= link_to 'Show', form_datum %></td>
+        <td><%= link_to 'Edit', edit_form_datum_path(form_datum) %></td>
+        <td><%= link_to 'Destroy', form_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Form datum', new_form_datum_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @scouter.name %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @scouter.number %>
+</p>
+
+<%= link_to 'Edit', edit_scouter_path(@scouter) %> |
+<%= link_to 'Back', scouters_path %>

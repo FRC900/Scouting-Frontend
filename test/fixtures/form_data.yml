@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  form_id: 
+  match_number: 1
+  team_id: 
+  scouter_id: 
+  comments: MyText
+
+two:
+  form_id: 
+  match_number: 1
+  team_id: 
+  scouter_id: 
+  comments: MyText

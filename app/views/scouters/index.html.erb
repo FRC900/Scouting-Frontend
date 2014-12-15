@@ -1,0 +1,27 @@
+<h1>Listing scouters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scouters.each do |scouter| %>
+      <tr>
+        <td><%= scouter.name %></td>
+        <td><%= scouter.number %></td>
+        <td><%= link_to 'Show', scouter %></td>
+        <td><%= link_to 'Edit', edit_scouter_path(scouter) %></td>
+        <td><%= link_to 'Destroy', scouter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scouter', new_scouter_path %>
