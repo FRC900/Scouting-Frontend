@@ -6,8 +6,13 @@
 </p>
 
 <p>
+  <strong>FileName:</strong>
+  <%= @form_datum.filename %>
+</p>
+
+<p>
   <strong>Match number:</strong>
-  <%= @form_datum.match_number %>
+  <%= @form_datum.match.number %>
 </p>
 
 <p>
@@ -23,6 +28,11 @@
 <p>
   <strong>Comments:</strong>
   <%= @form_datum.comments %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @form_datum.notes %>
 </p>
 
 <%= link_to 'Edit', edit_form_datum_path(@form_datum) %> |

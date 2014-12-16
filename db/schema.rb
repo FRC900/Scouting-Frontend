@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141211021211) do
+ActiveRecord::Schema.define(version: 20141216010754) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -21,6 +21,24 @@ ActiveRecord::Schema.define(version: 20141211021211) do
   end
 
   add_index "categories", ["form_id"], name: "index_categories_on_form_id"
+
+  create_table "competitions", force: true do |t|
+    t.string   "name"
+    t.date     "year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "competitions_teams", force: true do |t|
+    t.integer  "competition_id"
+    t.integer  "team_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "notes"
+  end
+
+  add_index "competitions_teams", ["competition_id"], name: "index_competitions_teams_on_competition_id"
+  add_index "competitions_teams", ["team_id"], name: "index_competitions_teams_on_team_id"
 
   create_table "data", force: true do |t|
     t.integer  "data_type_id"
@@ -38,6 +56,7 @@ ActiveRecord::Schema.define(version: 20141211021211) do
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "column_name"
   end
 
   add_index "data_types", ["category_id"], name: "index_data_types_on_category_id"
@@ -58,6 +77,8 @@ ActiveRecord::Schema.define(version: 20141211021211) do
     t.text     "comments"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "filename"
+    t.text     "notes"
   end
 
   add_index "form_data", ["form_id"], name: "index_form_data_on_form_id"
@@ -69,7 +90,18 @@ ActiveRecord::Schema.define(version: 20141211021211) do
     t.date     "year"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "competition_id"
   end
+
+  create_table "matches", force: true do |t|
+    t.integer  "number"
+    t.integer  "competition_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "notes"
+  end
+
+  add_index "matches", ["competition_id"], name: "index_matches_on_competition_id"
 
   create_table "scouters", force: true do |t|
     t.string   "name"

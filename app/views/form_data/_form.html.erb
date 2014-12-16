@@ -16,6 +16,10 @@
     <%= f.text_field :form_id %>
   </div>
   <div class="field">
+    <%= f.label :filename %><br>
+    <%= f.text_area :filename %>
+  </div>
+  <div class="field">
     <%= f.label :match_number %><br>
     <%= f.number_field :match_number %>
   </div>
@@ -30,6 +34,10 @@
   <div class="field">
     <%= f.label :comments %><br>
     <%= f.text_area :comments %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
   </div>
   <div class="actions">
     <%= f.submit %>

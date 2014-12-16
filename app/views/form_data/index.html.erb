@@ -4,10 +4,12 @@
   <thead>
     <tr>
       <th>Form</th>
+      <th>Filename</th>
       <th>Match number</th>
       <th>Team</th>
       <th>Scouter</th>
       <th>Comments</th>
+      <th>Notes</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +18,12 @@
     <% @form_data.each do |form_datum| %>
       <tr>
         <td><%= form_datum.form %></td>
-        <td><%= form_datum.match_number %></td>
+        <td><%= form_datum.filename %></td>
+        <td><%= form_datum.match.number %></td>
         <td><%= form_datum.team %></td>
         <td><%= form_datum.scouter %></td>
         <td><%= form_datum.comments %></td>
+        <td><%= form_datum.notes %></td>
         <td><%= link_to 'Show', form_datum %></td>
         <td><%= link_to 'Edit', edit_form_datum_path(form_datum) %></td>
         <td><%= link_to 'Destroy', form_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>

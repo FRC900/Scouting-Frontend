@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :competitions_teams
+
+  resources :matches
+
+  resources :competitions
+
   resources :data_values
 
   resources :data
