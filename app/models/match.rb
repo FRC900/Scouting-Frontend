@@ -1,5 +1,7 @@
 class Match < ActiveRecord::Base
   belongs_to :competition
-   has_many :form_data
-   
+  
+  has_many :match_form_data
+  has_many :match_lineitems, :through=>:match_form_data
+  has_many :match_lineitem_values, :through=>:match_lineitems
 end
