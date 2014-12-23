@@ -4,7 +4,6 @@
   <thead>
     <tr>
       <th>Pit form</th>
-      <th>Match</th>
       <th>Competition team</th>
       <th>Scouter</th>
       <th>Filename</th>
@@ -16,10 +15,9 @@
   <tbody>
     <% @pit_form_data.each do |pit_form_datum| %>
       <tr>
-        <td><%= pit_form_datum.pit_form %></td>
-        <td><%= pit_form_datum.match %></td>
-        <td><%= pit_form_datum.competition_team %></td>
-        <td><%= pit_form_datum.scouter %></td>
+        <td><%= pit_form_datum.pit_form.name %></td>
+        <td><%= pit_form_datum.competitions_team %></td>
+        <td><%= pit_form_datum.scouter.name %></td>
         <td><%= pit_form_datum.filename %></td>
         <td><%= pit_form_datum.notes %></td>
         <td><%= link_to 'Show', pit_form_datum %></td>

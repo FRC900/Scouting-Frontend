@@ -1,5 +1,6 @@
 class MatchForm < ActiveRecord::Base
-  belongs_to :competition
+  has_and_belongs_to_many :competitions
+  has_many :competitions_match_forms
   
   has_many :match_categories
   has_many :match_form_lineitems, :through=>:match_categories

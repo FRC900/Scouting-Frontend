@@ -13,7 +13,7 @@
     <% @pit_categories.each do |pit_category| %>
       <tr>
         <td><%= pit_category.name %></td>
-        <td><%= pit_category.pit_form %></td>
+        <td><%= pit_category.pit_form.name %></td>
         <td><%= link_to 'Show', pit_category %></td>
         <td><%= link_to 'Edit', edit_pit_category_path(pit_category) %></td>
         <td><%= link_to 'Destroy', pit_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>

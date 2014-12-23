@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :competitions_pit_forms
+
+  resources :competitions_match_forms
+
   resources :pit_lineitem_values
 
   resources :match_lineitem_values

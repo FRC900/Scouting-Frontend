@@ -16,8 +16,8 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :match_form_id %><br>
-    <%= f.text_field :match_form_id %>
+    <%= f.label :match_form %><br>
+    <%= f.collection_select :match_form_id, MatchForm.order(:name), :id, :name, {prompt: "Select a Form"}, {}%>
   </div>
   <div class="actions">
     <%= f.submit %>

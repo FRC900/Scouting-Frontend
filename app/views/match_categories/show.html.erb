@@ -7,7 +7,7 @@
 
 <p>
   <strong>Match form:</strong>
-  <%= @match_category.match_form %>
+  <%= @match_category.match_form.name rescue @match_category.match_form %>
 </p>
 
 <%= link_to 'Edit', edit_match_category_path(@match_category) %> |

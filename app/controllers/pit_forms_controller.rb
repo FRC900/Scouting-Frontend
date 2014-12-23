@@ -69,6 +69,6 @@ class PitFormsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pit_form_params
-      params.require(:pit_form).permit(:name, :competition_id)
+      params.require(:pit_form).permit(:name)
     end
 end

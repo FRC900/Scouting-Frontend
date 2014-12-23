@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :match_form_lineitem_id %><br>
-    <%= f.text_field :match_form_lineitem_id %>
+    <%= f.label :match_lineitem_id %><br>
+	<%= f.collection_select :match_lineitem_id, MatchLineitem.all, :id, :name, {prompt: "Select a Line Item"}, {} %>
   </div>
   <div class="field">
     <%= f.label :value %><br>

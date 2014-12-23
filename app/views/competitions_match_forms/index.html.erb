@@ -1,0 +1,27 @@
+<h1>Listing competitions_match_forms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Competition</th>
+      <th>Match Scouting Form</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @competitions_match_forms.each do |competitions_match_form| %>
+      <tr>
+        <td><%= competitions_match_form.competition.year_name rescue "No Competition" %></td>
+        <td><%= competitions_match_form.match_form.name rescue "No Form" %></td>
+        <td><%= link_to 'Show', competitions_match_form %></td>
+        <td><%= link_to 'Edit', edit_competitions_match_form_path(competitions_match_form) %></td>
+        <td><%= link_to 'Destroy', competitions_match_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Competitions match form', new_competitions_match_form_path %>

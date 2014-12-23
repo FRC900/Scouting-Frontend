@@ -13,7 +13,7 @@
     <% @match_categories.each do |match_category| %>
       <tr>
         <td><%= match_category.name %></td>
-        <td><%= match_category.match_form %></td>
+        <td><%= match_category.match_form.name rescue match_category.match_form %></td>
         <td><%= link_to 'Show', match_category %></td>
         <td><%= link_to 'Edit', edit_match_category_path(match_category) %></td>
         <td><%= link_to 'Destroy', match_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>

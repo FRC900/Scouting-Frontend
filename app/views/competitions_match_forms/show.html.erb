@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Competition:</strong>
+  <%= @competitions_match_form.competition rescue "No Competition"%>
+</p>
+
+<p>
+  <strong>Match Scouting Form:</strong>
+  <%= @competitions_match_form.match_form.name rescue "No Form" %>
+</p>
+
+<%= link_to 'Edit', edit_competitions_match_form_path(@competitions_match_form) %> |
+<%= link_to 'Back', competitions_match_forms_path %>

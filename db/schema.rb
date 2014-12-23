@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141223173341) do
+ActiveRecord::Schema.define(version: 20141223191821) do
 
   create_table "competitions", force: true do |t|
     t.string   "name"
@@ -19,6 +19,26 @@ ActiveRecord::Schema.define(version: 20141223173341) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "competitions_match_forms", force: true do |t|
+    t.integer  "competition_id"
+    t.integer  "match_form_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "competitions_match_forms", ["competition_id"], name: "index_competitions_match_forms_on_competition_id"
+  add_index "competitions_match_forms", ["match_form_id"], name: "index_competitions_match_forms_on_match_form_id"
+
+  create_table "competitions_pit_forms", force: true do |t|
+    t.integer  "competition_id"
+    t.integer  "pit_form_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "competitions_pit_forms", ["competition_id"], name: "index_competitions_pit_forms_on_competition_id"
+  add_index "competitions_pit_forms", ["pit_form_id"], name: "index_competitions_pit_forms_on_pit_form_id"
 
   create_table "competitions_teams", force: true do |t|
     t.integer  "competition_id"
@@ -43,7 +63,7 @@ ActiveRecord::Schema.define(version: 20141223173341) do
   create_table "match_form_data", force: true do |t|
     t.integer  "match_form_id"
     t.integer  "match_id"
-    t.integer  "competition_team_id"
+    t.integer  "competitions_team_id"
     t.integer  "scouter_id"
     t.string   "form_comments"
     t.string   "filename"
@@ -52,7 +72,7 @@ ActiveRecord::Schema.define(version: 20141223173341) do
     t.datetime "updated_at"
   end
 
-  add_index "match_form_data", ["competition_team_id"], name: "index_match_form_data_on_competition_team_id"
+  add_index "match_form_data", ["competitions_team_id"], name: "index_match_form_data_on_competitions_team_id"
   add_index "match_form_data", ["match_form_id"], name: "index_match_form_data_on_match_form_id"
   add_index "match_form_data", ["match_id"], name: "index_match_form_data_on_match_id"
   add_index "match_form_data", ["scouter_id"], name: "index_match_form_data_on_scouter_id"
@@ -70,21 +90,18 @@ ActiveRecord::Schema.define(version: 20141223173341) do
 
   create_table "match_forms", force: true do |t|
     t.string   "name"
-    t.integer  "competition_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "match_forms", ["competition_id"], name: "index_match_forms_on_competition_id"
-
   create_table "match_lineitem_values", force: true do |t|
-    t.integer  "match_form_lineitem_id"
+    t.integer  "match_lineitem_id"
     t.text     "value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "match_lineitem_values", ["match_form_lineitem_id"], name: "index_match_lineitem_values_on_match_form_lineitem_id"
+  add_index "match_lineitem_values", ["match_lineitem_id"], name: "index_match_lineitem_values_on_match_lineitem_id"
 
   create_table "match_lineitems", force: true do |t|
     t.integer  "match_form_lineitem_id"
@@ -117,8 +134,7 @@ ActiveRecord::Schema.define(version: 20141223173341) do
 
   create_table "pit_form_data", force: true do |t|
     t.integer  "pit_form_id"
-    t.integer  "match_id"
-    t.integer  "competition_team_id"
+    t.integer  "competitions_team_id"
     t.integer  "scouter_id"
     t.string   "filename"
     t.text     "notes"
@@ -126,8 +142,7 @@ ActiveRecord::Schema.define(version: 20141223173341) do
     t.datetime "updated_at"
   end
 
-  add_index "pit_form_data", ["competition_team_id"], name: "index_pit_form_data_on_competition_team_id"
-  add_index "pit_form_data", ["match_id"], name: "index_pit_form_data_on_match_id"
+  add_index "pit_form_data", ["competitions_team_id"], name: "index_pit_form_data_on_competitions_team_id"
   add_index "pit_form_data", ["pit_form_id"], name: "index_pit_form_data_on_pit_form_id"
   add_index "pit_form_data", ["scouter_id"], name: "index_pit_form_data_on_scouter_id"
 
@@ -144,21 +159,18 @@ ActiveRecord::Schema.define(version: 20141223173341) do
 
   create_table "pit_forms", force: true do |t|
     t.string   "name"
-    t.integer  "competition_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "pit_forms", ["competition_id"], name: "index_pit_forms_on_competition_id"
-
   create_table "pit_lineitem_values", force: true do |t|
-    t.integer  "pit_form_lineitem_id"
+    t.integer  "pit_lineitem_id"
     t.text     "value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "pit_lineitem_values", ["pit_form_lineitem_id"], name: "index_pit_lineitem_values_on_pit_form_lineitem_id"
+  add_index "pit_lineitem_values", ["pit_lineitem_id"], name: "index_pit_lineitem_values_on_pit_lineitem_id"
 
   create_table "pit_lineitems", force: true do |t|
     t.integer  "pit_form_lineitem_id"

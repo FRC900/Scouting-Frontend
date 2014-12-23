@@ -12,8 +12,8 @@
   <tbody>
     <% @match_lineitems.each do |match_lineitem| %>
       <tr>
-        <td><%= match_lineitem.match_form_lineitem %></td>
-        <td><%= match_lineitem.match_form_data %></td>
+        <td><%= match_lineitem.match_lineitem %></td>
+        <td><%= match_lineitem.match_form_datum.name %></td>
         <td><%= link_to 'Show', match_lineitem %></td>
         <td><%= link_to 'Edit', edit_match_lineitem_path(match_lineitem) %></td>
         <td><%= link_to 'Destroy', match_lineitem, method: :delete, data: { confirm: 'Are you sure?' } %></td>

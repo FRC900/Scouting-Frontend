@@ -1,0 +1,2 @@
+module CompetitionsPitFormsHelper
+end

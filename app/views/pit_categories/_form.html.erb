@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :pit_form_id %><br>
-    <%= f.text_field :pit_form_id %>
+	<%= f.collection_select :pit_form_id, PitForm.order(:name), :id, :name, {prompt: "Select a Form"}, {} %>
   </div>
   <div class="actions">
     <%= f.submit %>

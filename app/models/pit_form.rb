@@ -1,5 +1,6 @@
 class PitForm < ActiveRecord::Base
-  belongs_to :competition
+  has_and_belongs_to_many :competitions
+  has_many :competitions_pit_forms
   
   has_many :pit_categories
   has_many :pit_form_lineitems, :through=>:pit_categories

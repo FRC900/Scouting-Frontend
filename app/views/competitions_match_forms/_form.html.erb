@@ -1,0 +1,25 @@
+<%= form_for(@competitions_match_form) do |f| %>
+  <% if @competitions_match_form.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@competitions_match_form.errors.count, "error") %> prohibited this competitions_match_form from being saved:</h2>
+
+      <ul>
+      <% @competitions_match_form.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :competition_id %><br>
+	<%= f.collection_select :competition_id, Competition.order(year: :desc, name: :asc), :id, :year_name, {prompt: "Select a competition"}, {} %>
+  </div>
+  <div class="field">
+    <%= f.label :match_form_id %><br>
+	<%= f.collection_select :match_form_id, MatchForm.order(:name), :id, :name, {prompt: "Select a Match Scouting Form"}, {} %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

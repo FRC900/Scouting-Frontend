@@ -17,10 +17,10 @@
   <tbody>
     <% @match_form_data.each do |match_form_datum| %>
       <tr>
-        <td><%= match_form_datum.match_form %></td>
-        <td><%= match_form_datum.match %></td>
-        <td><%= match_form_datum.competition_team %></td>
-        <td><%= match_form_datum.scouter %></td>
+        <td><%= match_form_datum.match_form.name %></td>
+        <td><%= match_form_datum.match.number %></td>
+        <td><%= match_form_datum.competitions_team.name %></td>
+        <td><%= match_form_datum.scouter.name %></td>
         <td><%= match_form_datum.form_comments %></td>
         <td><%= match_form_datum.filename %></td>
         <td><%= match_form_datum.notes %></td>

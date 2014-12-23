@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :competition_id %><br>
-    <%= f.text_field :competition_id %>
+	<%= f.collection_select :competition_id, Competition.order(year: :desc, name: :asc), :id, :year_name, {prompt: "Select a competition"}, {} %>
   </div>
   <div class="actions">
     <%= f.submit %>

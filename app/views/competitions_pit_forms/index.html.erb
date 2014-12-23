@@ -1,0 +1,27 @@
+<h1>Listing competitions_pit_forms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Competition</th>
+      <th>Pit Scouting Form</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @competitions_pit_forms.each do |competitions_pit_form| %>
+      <tr>
+        <td><%= competitions_pit_form.competition.year_name rescue "No Competition" %></td>
+        <td><%= competitions_pit_form.pit_form.name rescue "No Form"%></td>
+        <td><%= link_to 'Show', competitions_pit_form %></td>
+        <td><%= link_to 'Edit', edit_competitions_pit_form_path(competitions_pit_form) %></td>
+        <td><%= link_to 'Destroy', competitions_pit_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Competitions pit form', new_competitions_pit_form_path %>

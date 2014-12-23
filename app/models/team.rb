@@ -21,4 +21,8 @@ class Team < ActiveRecord::Base
     has_many :pit_form_data, :through=>:pit_forms
     has_many :pit_lineitems, :through=>:pit_form_data
     has_many :pit_lineitem_values, :through=>:pit_lineitems
+    
+    def full_name
+      return "#{self.number} - #{self.name}"
+    end
 end

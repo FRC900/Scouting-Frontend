@@ -12,7 +12,7 @@
   <tbody>
     <% @match_lineitem_values.each do |match_lineitem_value| %>
       <tr>
-        <td><%= match_lineitem_value.match_form_lineitem %></td>
+        <td><%= match_lineitem_value.match_form_lineitem.name %></td>
         <td><%= match_lineitem_value.value %></td>
         <td><%= link_to 'Show', match_lineitem_value %></td>
         <td><%= link_to 'Edit', edit_match_lineitem_value_path(match_lineitem_value) %></td>

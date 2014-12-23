@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :match_form_lineitem_id %><br>
-    <%= f.text_field :match_form_lineitem_id %>
+	<%= f.collection_select :match_form_lineitem_id, MatchFormLineitem_id.all, :id, :name, {prompt: "Select a Form Lineitem"}, {} %>
   </div>
   <div class="field">
     <%= f.label :match_form_data_id %><br>
-    <%= f.text_field :match_form_data_id %>
+	<%= f.collection_select :match_form_data_id, MatchFormData.all, :id, :name, {prompt: "Select a Form Data"}, {} %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -13,19 +13,19 @@
 
   <div class="field">
     <%= f.label :match_form_id %><br>
-    <%= f.text_field :match_form_id %>
+	<%= f.collection_select :match_form_id, MatchForm.order(:name), :id, :name, {prompt: "Select a Form"}, {} %>
   </div>
   <div class="field">
     <%= f.label :match_id %><br>
-    <%= f.text_field :match_id %>
+	<%= f.collection_select :match_id, Match.order(:number), :id, :number, {prompt: "Select a Match"}, {} %>
   </div>
   <div class="field">
-    <%= f.label :competition_team_id %><br>
-    <%= f.text_field :competition_team_id %>
+    <%= f.label :competitions_team_id %><br>
+	<%= f.collection_select :competitions_team_id, CompetitionsTeam.order(team_id: :asc), :id, :name, {prompt: "Select a competition/team"}, {} %>
   </div>
   <div class="field">
     <%= f.label :scouter_id %><br>
-    <%= f.text_field :scouter_id %>
+	<%= f.collection_select :scouter_id, Scouter.order(:name), :id, :name, {prompt: "Select a Scouter"}, {} %>
   </div>
   <div class="field">
     <%= f.label :form_comments %><br>

@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :pit_form_lineitem_id %><br>
-    <%= f.text_field :pit_form_lineitem_id %>
+	<%= f.collection_select :pit_form_lineitem_id, PitFormLineitem.order(:name), :id, :name, {prompt: "Select the Form's Lineitem"}, {} %>
   </div>
   <div class="field">
     <%= f.label :pit_form_data_id %><br>
-    <%= f.text_field :pit_form_data_id %>
+	<%= f.collection_select :pit_form_data_id, PitFormData.all, :id, :name, {prompt: "Select a competition/team"}, {} %>
   </div>
   <div class="actions">
     <%= f.submit %>

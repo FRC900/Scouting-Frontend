@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Competition:</strong>
+  <%= @competitions_pit_form.competition.year_name rescue "No Competition" %>
+</p>
+
+<p>
+  <strong>Pit form:</strong>
+  <%= @competitions_pit_form.pit_form.name rescue "No Form" %>
+</p>
+
+<%= link_to 'Edit', edit_competitions_pit_form_path(@competitions_pit_form) %> |
+<%= link_to 'Back', competitions_pit_forms_path %>

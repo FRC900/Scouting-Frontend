@@ -12,7 +12,7 @@
   <tbody>
     <% @pit_lineitem_values.each do |pit_lineitem_value| %>
       <tr>
-        <td><%= pit_lineitem_value.pit_form_lineitem %></td>
+        <td><%= pit_lineitem_value.pit_lineitem.name %></td>
         <td><%= pit_lineitem_value.value %></td>
         <td><%= link_to 'Show', pit_lineitem_value %></td>
         <td><%= link_to 'Edit', edit_pit_lineitem_value_path(pit_lineitem_value) %></td>
