@@ -1,0 +1,27 @@
+<h1>Listing pit_lineitems</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pit form lineitem</th>
+      <th>Pit form data</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pit_lineitems.each do |pit_lineitem| %>
+      <tr>
+        <td><%= pit_lineitem.pit_form_lineitem %></td>
+        <td><%= pit_lineitem.pit_form_data %></td>
+        <td><%= link_to 'Show', pit_lineitem %></td>
+        <td><%= link_to 'Edit', edit_pit_lineitem_path(pit_lineitem) %></td>
+        <td><%= link_to 'Destroy', pit_lineitem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pit lineitem', new_pit_lineitem_path %>

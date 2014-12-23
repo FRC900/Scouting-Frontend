@@ -1,21 +1,33 @@
 Rails.application.routes.draw do
+  resources :pit_lineitem_values
+
+  resources :match_lineitem_values
+
+  resources :pit_lineitems
+
+  resources :match_lineitems
+
+  resources :pit_form_data
+
+  resources :match_form_data
+
+  resources :pit_form_lineitems
+
+  resources :match_form_lineitems
+
+  resources :pit_categories
+
+  resources :match_categories
+
+  resources :pit_forms
+
+  resources :match_forms
+
   resources :competitions_teams
 
   resources :matches
 
   resources :competitions
-
-  resources :data_values
-
-  resources :data
-
-  resources :form_data
-
-  resources :data_types
-
-  resources :categories
-
-  resources :forms
 
   resources :scouters
 

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pit_form.name %>
+</p>
+
+<p>
+  <strong>Competition:</strong>
+  <%= @pit_form.competition %>
+</p>
+
+<%= link_to 'Edit', edit_pit_form_path(@pit_form) %> |
+<%= link_to 'Back', pit_forms_path %>

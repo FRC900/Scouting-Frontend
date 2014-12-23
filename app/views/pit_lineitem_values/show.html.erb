@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pit form lineitem:</strong>
+  <%= @pit_lineitem_value.pit_form_lineitem %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @pit_lineitem_value.value %>
+</p>
+
+<%= link_to 'Edit', edit_pit_lineitem_value_path(@pit_lineitem_value) %> |
+<%= link_to 'Back', pit_lineitem_values_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  match_form_id: 
+  match_id: 
+  competition_team_id: 
+  scouter_id: 
+  form_comments: MyString
+  filename: MyString
+  notes: MyText
+
+two:
+  match_form_id: 
+  match_id: 
+  competition_team_id: 
+  scouter_id: 
+  form_comments: MyString
+  filename: MyString
+  notes: MyText

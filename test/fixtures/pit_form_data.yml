@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pit_form_id: 
+  match_id: 
+  competition_team_id: 
+  scouter_id: 
+  filename: MyString
+  notes: MyText
+
+two:
+  pit_form_id: 
+  match_id: 
+  competition_team_id: 
+  scouter_id: 
+  filename: MyString
+  notes: MyText

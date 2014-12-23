@@ -3,6 +3,7 @@ class CreateMatches < ActiveRecord::Migration
     create_table :matches do |t|
       t.integer :number
       t.references :competition, index: true
+      t.text :notes
 
       t.timestamps
     end

@@ -1,0 +1,41 @@
+<%= form_for(@pit_form_datum) do |f| %>
+  <% if @pit_form_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pit_form_datum.errors.count, "error") %> prohibited this pit_form_datum from being saved:</h2>
+
+      <ul>
+      <% @pit_form_datum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pit_form_id %><br>
+    <%= f.text_field :pit_form_id %>
+  </div>
+  <div class="field">
+    <%= f.label :match_id %><br>
+    <%= f.text_field :match_id %>
+  </div>
+  <div class="field">
+    <%= f.label :competition_team_id %><br>
+    <%= f.text_field :competition_team_id %>
+  </div>
+  <div class="field">
+    <%= f.label :scouter_id %><br>
+    <%= f.text_field :scouter_id %>
+  </div>
+  <div class="field">
+    <%= f.label :filename %><br>
+    <%= f.text_field :filename %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

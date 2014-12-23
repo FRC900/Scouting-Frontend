@@ -1,0 +1,25 @@
+<%= form_for(@pit_lineitem) do |f| %>
+  <% if @pit_lineitem.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pit_lineitem.errors.count, "error") %> prohibited this pit_lineitem from being saved:</h2>
+
+      <ul>
+      <% @pit_lineitem.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pit_form_lineitem_id %><br>
+    <%= f.text_field :pit_form_lineitem_id %>
+  </div>
+  <div class="field">
+    <%= f.label :pit_form_data_id %><br>
+    <%= f.text_field :pit_form_data_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

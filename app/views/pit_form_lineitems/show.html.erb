@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pit_form_lineitem.name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @pit_form_lineitem.type %>
+</p>
+
+<p>
+  <strong>Pit category:</strong>
+  <%= @pit_form_lineitem.pit_category %>
+</p>
+
+<p>
+  <strong>Column name:</strong>
+  <%= @pit_form_lineitem.column_name %>
+</p>
+
+<%= link_to 'Edit', edit_pit_form_lineitem_path(@pit_form_lineitem) %> |
+<%= link_to 'Back', pit_form_lineitems_path %>

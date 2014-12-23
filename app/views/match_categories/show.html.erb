@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @match_category.name %>
+</p>
+
+<p>
+  <strong>Match form:</strong>
+  <%= @match_category.match_form %>
+</p>
+
+<%= link_to 'Edit', edit_match_category_path(@match_category) %> |
+<%= link_to 'Back', match_categories_path %>

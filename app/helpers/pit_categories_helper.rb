@@ -1,0 +1,2 @@
+module PitCategoriesHelper
+end

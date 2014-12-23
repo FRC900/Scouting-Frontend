@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pit form:</strong>
+  <%= @pit_form_datum.pit_form %>
+</p>
+
+<p>
+  <strong>Match:</strong>
+  <%= @pit_form_datum.match %>
+</p>
+
+<p>
+  <strong>Competition team:</strong>
+  <%= @pit_form_datum.competition_team %>
+</p>
+
+<p>
+  <strong>Scouter:</strong>
+  <%= @pit_form_datum.scouter %>
+</p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @pit_form_datum.filename %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @pit_form_datum.notes %>
+</p>
+
+<%= link_to 'Edit', edit_pit_form_datum_path(@pit_form_datum) %> |
+<%= link_to 'Back', pit_form_data_path %>

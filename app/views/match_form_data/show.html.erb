@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Match form:</strong>
+  <%= @match_form_datum.match_form %>
+</p>
+
+<p>
+  <strong>Match:</strong>
+  <%= @match_form_datum.match %>
+</p>
+
+<p>
+  <strong>Competition team:</strong>
+  <%= @match_form_datum.competition_team %>
+</p>
+
+<p>
+  <strong>Scouter:</strong>
+  <%= @match_form_datum.scouter %>
+</p>
+
+<p>
+  <strong>Form comments:</strong>
+  <%= @match_form_datum.form_comments %>
+</p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @match_form_datum.filename %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @match_form_datum.notes %>
+</p>
+
+<%= link_to 'Edit', edit_match_form_datum_path(@match_form_datum) %> |
+<%= link_to 'Back', match_form_data_path %>

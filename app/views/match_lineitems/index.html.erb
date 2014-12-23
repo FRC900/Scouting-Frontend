@@ -1,0 +1,27 @@
+<h1>Listing match_lineitems</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Match form lineitem</th>
+      <th>Match form data</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @match_lineitems.each do |match_lineitem| %>
+      <tr>
+        <td><%= match_lineitem.match_form_lineitem %></td>
+        <td><%= match_lineitem.match_form_data %></td>
+        <td><%= link_to 'Show', match_lineitem %></td>
+        <td><%= link_to 'Edit', edit_match_lineitem_path(match_lineitem) %></td>
+        <td><%= link_to 'Destroy', match_lineitem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Match lineitem', new_match_lineitem_path %>

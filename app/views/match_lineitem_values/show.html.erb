@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Match form lineitem:</strong>
+  <%= @match_lineitem_value.match_form_lineitem %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @match_lineitem_value.value %>
+</p>
+
+<%= link_to 'Edit', edit_match_lineitem_value_path(@match_lineitem_value) %> |
+<%= link_to 'Back', match_lineitem_values_path %>
