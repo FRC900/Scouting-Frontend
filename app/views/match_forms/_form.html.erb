@@ -18,6 +18,7 @@
   <%= f.fields_for :match_categories do |builder| %>
   	<%= render "match_category_fields", :f => builder %>
   <% end %>
+  <p><%= link_to_add_fields "Add Category", f, :match_categories %></p>
   <div class="actions">
     <%= f.submit %>
   </div>

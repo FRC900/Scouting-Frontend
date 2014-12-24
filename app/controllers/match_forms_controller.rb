@@ -15,12 +15,6 @@ class MatchFormsController < ApplicationController
   # GET /match_forms/new
   def new
     @match_form = MatchForm.new
-    1.times do
-      cat = @match_form.match_categories.build
-      2.times do 
-        cat.match_form_lineitems.build
-      end
-    end
   end
 
   # GET /match_forms/1/edit
