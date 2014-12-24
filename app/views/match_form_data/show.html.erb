@@ -12,7 +12,7 @@
 
 <p>
   <strong>Competition team:</strong>
-  <%= @match_form_datum.competitions_team.name %>
+  <%= @match_form_datum.competitions_team.name rescue  @match_form_datum.competitions_team%>
 </p>
 
 <p>

@@ -15,7 +15,7 @@
     <% @pit_form_lineitems.each do |pit_form_lineitem| %>
       <tr>
         <td><%= pit_form_lineitem.name %></td>
-        <td><%= pit_form_lineitem.type %></td>
+        <td><%= pit_form_lineitem.data_type %></td>
         <td><%= pit_form_lineitem.pit_category.name %></td>
         <td><%= pit_form_lineitem.column_name %></td>
         <td><%= link_to 'Show', pit_form_lineitem %></td>

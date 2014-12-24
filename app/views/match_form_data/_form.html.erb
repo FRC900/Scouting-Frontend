@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :match_id %><br>
-	<%= f.collection_select :match_id, Match.order(:number), :id, :number, {prompt: "Select a Match"}, {} %>
+	<%= f.collection_select :match_id, Match.order(:number), :id, :number_comp, {prompt: "Select a Match"}, {} %>
   </div>
   <div class="field">
     <%= f.label :competitions_team_id %><br>

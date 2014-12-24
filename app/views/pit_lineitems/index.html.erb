@@ -12,8 +12,8 @@
   <tbody>
     <% @pit_lineitems.each do |pit_lineitem| %>
       <tr>
-        <td><%= pit_lineitem.pit_form_lineitem %></td>
-        <td><%= pit_lineitem.pit_form_data %></td>
+        <td><%= pit_lineitem.pit_form_lineitem.name %></td>
+        <td><%= pit_lineitem.pit_form_datum.name %></td>
         <td><%= link_to 'Show', pit_lineitem %></td>
         <td><%= link_to 'Edit', edit_pit_lineitem_path(pit_lineitem) %></td>
         <td><%= link_to 'Destroy', pit_lineitem, method: :delete, data: { confirm: 'Are you sure?' } %></td>

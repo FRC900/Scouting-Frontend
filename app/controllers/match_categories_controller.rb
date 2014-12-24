@@ -69,6 +69,6 @@ class MatchCategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def match_category_params
-      params.require(:match_category).permit(:name, :match_form_id)
+      params.require(:match_category).permit(:name, :match_form_id, match_form_lineitems_attributes: [:name, :data_type, :column_name, :_destroy], :_destroy)
     end
 end

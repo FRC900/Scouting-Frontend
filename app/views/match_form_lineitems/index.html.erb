@@ -15,7 +15,7 @@
     <% @match_form_lineitems.each do |match_form_lineitem| %>
       <tr>
         <td><%= match_form_lineitem.name %></td>
-        <td><%= match_form_lineitem.type %></td>
+        <td><%= match_form_lineitem.data_type %></td>
         <td><%= match_form_lineitem.match_category.name %></td>
         <td><%= match_form_lineitem.column_name %></td>
         <td><%= link_to 'Show', match_form_lineitem %></td>

@@ -12,9 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, "Form Name"%><br>
     <%= f.text_field :name %>
   </div>
+  <%= f.fields_for :match_categories do |builder| %>
+  	<%= render "match_category_fields", :f => builder %>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

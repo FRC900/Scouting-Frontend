@@ -69,6 +69,6 @@ class PitFormLineitemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pit_form_lineitem_params
-      params.require(:pit_form_lineitem).permit(:name, :type, :pit_category_id, :column_name)
+      params.require(:pit_form_lineitem).permit(:name, :data_type, :pit_category_id, :column_name)
     end
 end

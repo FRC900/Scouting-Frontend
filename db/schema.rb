@@ -79,7 +79,7 @@ ActiveRecord::Schema.define(version: 20141223191821) do
 
   create_table "match_form_lineitems", force: true do |t|
     t.string   "name"
-    t.string   "type"
+    t.string   "data_type"
     t.integer  "match_category_id"
     t.string   "column_name"
     t.datetime "created_at"
@@ -105,12 +105,12 @@ ActiveRecord::Schema.define(version: 20141223191821) do
 
   create_table "match_lineitems", force: true do |t|
     t.integer  "match_form_lineitem_id"
-    t.integer  "match_form_data_id"
+    t.integer  "match_form_datum_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "match_lineitems", ["match_form_data_id"], name: "index_match_lineitems_on_match_form_data_id"
+  add_index "match_lineitems", ["match_form_datum_id"], name: "index_match_lineitems_on_match_form_datum_id"
   add_index "match_lineitems", ["match_form_lineitem_id"], name: "index_match_lineitems_on_match_form_lineitem_id"
 
   create_table "matches", force: true do |t|
@@ -148,7 +148,7 @@ ActiveRecord::Schema.define(version: 20141223191821) do
 
   create_table "pit_form_lineitems", force: true do |t|
     t.string   "name"
-    t.string   "type"
+    t.string   "data_type"
     t.integer  "pit_category_id"
     t.string   "column_name"
     t.datetime "created_at"
@@ -174,12 +174,12 @@ ActiveRecord::Schema.define(version: 20141223191821) do
 
   create_table "pit_lineitems", force: true do |t|
     t.integer  "pit_form_lineitem_id"
-    t.integer  "pit_form_data_id"
+    t.integer  "pit_form_datum_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "pit_lineitems", ["pit_form_data_id"], name: "index_pit_lineitems_on_pit_form_data_id"
+  add_index "pit_lineitems", ["pit_form_datum_id"], name: "index_pit_lineitems_on_pit_form_datum_id"
   add_index "pit_lineitems", ["pit_form_lineitem_id"], name: "index_pit_lineitems_on_pit_form_lineitem_id"
 
   create_table "scouters", force: true do |t|

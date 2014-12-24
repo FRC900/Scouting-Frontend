@@ -15,6 +15,12 @@ class MatchFormsController < ApplicationController
   # GET /match_forms/new
   def new
     @match_form = MatchForm.new
+    1.times do
+      cat = @match_form.match_categories.build
+      2.times do 
+        cat.match_form_lineitems.build
+      end
+    end
   end
 
   # GET /match_forms/1/edit
@@ -69,6 +75,6 @@ class MatchFormsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def match_form_params
-      params.require(:match_form).permit(:name)
+      params.require(:match_form).permit(:name, match_categories_attributes: [:id, :name,:_destroy, match_form_lineitems_attributes: [:name, :data_type, :column_name, :_destroy]])
     end
 end

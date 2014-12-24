@@ -69,6 +69,6 @@ class MatchLineitemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def match_lineitem_params
-      params.require(:match_lineitem).permit(:match_form_lineitem_id, :match_form_data_id)
+      params.require(:match_lineitem).permit(:match_form_lineitem_id, :match_form_datum_id)
     end
 end

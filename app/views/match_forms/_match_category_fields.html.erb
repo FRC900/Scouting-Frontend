@@ -1,0 +1,7 @@
+<p>
+  <%= f.label :name, "Category Name" %><br />
+  <%= f.text_area :name %><br />
+</p>
+<%= f.fields_for :match_form_lineitems do |builder| %>
+  <%= render 'match_form_lineitem_fields', :f => builder %>
+<% end %>

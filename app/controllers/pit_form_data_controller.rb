@@ -69,6 +69,6 @@ class PitFormDataController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pit_form_datum_params
-      params.require(:pit_form_datum).permit(:pit_form_id, :match_id, :competition_team_id, :scouter_id, :filename, :notes)
+      params.require(:pit_form_datum).permit(:pit_form_id, :match_id, :competitions_team_id, :scouter_id, :filename, :notes)
     end
 end

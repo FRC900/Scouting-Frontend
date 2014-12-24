@@ -7,6 +7,6 @@ class PitFormDatum < ActiveRecord::Base
   has_many :pit_lineitem_values, :through=>:pit_lineitems
   
   def name
-    return "#{self.competition.year_name} #{eslf.competition_team.team.full_name}"
+    return "#{self.competitions_team.competition.year_name} #{self.competitions_team.team.full_name}"
   end
 end

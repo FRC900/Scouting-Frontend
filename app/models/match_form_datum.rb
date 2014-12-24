@@ -8,6 +8,6 @@ class MatchFormDatum < ActiveRecord::Base
   has_many :match_lineitem_values, :through=>:match_lineitems
   
   def name
-    return "#{self.competition.year_name} #{self.match.number} #{eslf.competition_team.team.full_name}"
+    return "#{self.competitions_team.competition.year_name} Match: #{self.match.number} Team: #{self.competitions_team.team.full_name}"
   end
 end

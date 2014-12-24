@@ -1,9 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Form Name:</strong>
   <%= @match_form.name %>
 </p>
+<hr />
+<h3>Categories</h3>
+<%=render @match_form.match_categories%>
 
 <%= link_to 'Edit', edit_match_form_path(@match_form) %> |
 <%= link_to 'Back', match_forms_path %>

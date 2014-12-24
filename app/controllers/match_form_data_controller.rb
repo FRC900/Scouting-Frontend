@@ -69,6 +69,6 @@ class MatchFormDataController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def match_form_datum_params
-      params.require(:match_form_datum).permit(:match_form_id, :match_id, :competition_team_id, :scouter_id, :form_comments, :filename, :notes)
+      params.require(:match_form_datum).permit(:match_form_id, :match_id, :competitions_team_id, :scouter_id, :form_comments, :filename, :notes)
     end
 end
